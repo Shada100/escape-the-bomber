@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#chessboard {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  color: lime;
+  background: linear-gradient(rgba(8, 8, 8, 0.9), rgba(0, 0, 0, 0.7)),
+    url(../public/PlayersPng/boom2.jpg) center/cover no-repeat;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.spot{
+  border: .1px solid lime;
+  /* background-color: #fff; */
+}
+.picz {
+  height: 70px;
+  width: 70px;
+  background-color: transparent;
+  border: none;
+}
+
+.bigCon {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(8, 8, 8, 0.9);
+  display: flex;
+}
+.mainboard {
+  width: 75vw;
+  border: 2px groove lime;
+}
+.playercon {
+  height: 100%;
+  width: 25vw;
+  border: 2px groove orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid blue;
+  height: 50%;
+  width: 25vw;
+}
+.scoreboard {
+  height: 50%;
+  width: 25vw;
+  border: 2px solid red;
+  text-align: center;
+  color: lime;
+  display: block;
+}
+
+/* title of the score component */
+.titlescores {
+  font-size: xx-large;
+}
+/*Section to the scores displayed  */
+.displayscores {
+  display: flex;
+  height: 40%;
+}
+.p1 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+.p2 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+.ttl {
+  font-size: x-large;
+  border: 1px groove goldenrod;
+  height: 20%;
+}
+.biggie {
+  border: 1px groove goldenrod;
+  height: 80%;
+  display: grid;
+  place-items: center;
+  font-size: 6rem;
+}
+
+/* Input Section */
+.inputsec {
+  height: 40%;
+}
+.btn {
+  cursor: pointer;
+  display: inline-block; /*In order to use margin on it*/
+  background: lime;
+  color: black;
+  text-decoration: none; /*To remove the underline*/
+  padding: 10px 30px;
+  margin: 20px 0;
+  border: 0;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+}
+.btn:hover {
+  transform: scale(0.95); /*1 is the default*/
+}
+.enter {
+}
+.input50 {
+  padding: 0.5rem;
+  margin: 10px 10px;
+}
+.input50 > input {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  border: 1px groove goldenrod;
+}
+
+/* Responsive section */
+@media screen and (min-width: 768px) {
+}
