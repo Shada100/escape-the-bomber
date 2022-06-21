@@ -14,15 +14,19 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
 }
-.spot{
-  border: .1px solid lime;
+.spot {
+  border: 0.1px solid lime;
   /* background-color: #fff; */
 }
 .picz {
-  height: 70px;
-  width: 70px;
+  width: 15%;
+  height: 15%;
   background-color: transparent;
-  border: none;
+  transition: all .3s ease-out;
+  /* border: 0.1px solid lime; */
+}
+.picz:hover {
+  transform: scale(1.5); /*1 is the default*/
 }
 
 .bigCon {
@@ -48,14 +52,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid blue;
+  border-bottom: 2px solid blue;
+  border-left: 2px solid   blue;
+  border-right: 2px solid  blue;
   height: 50%;
   width: 25vw;
 }
 .scoreboard {
   height: 50%;
   width: 25vw;
-  border: 2px solid red;
+  border-top: 2px solid red;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
   text-align: center;
   color: lime;
   display: block;
@@ -84,11 +92,11 @@
 }
 .ttl {
   font-size: x-large;
-  border: 1px groove goldenrod;
+  /* border: 1px groove goldenrod; */
   height: 20%;
 }
 .biggie {
-  border: 1px groove goldenrod;
+  /* border: 1px groove goldenrod; */
   height: 80%;
   display: grid;
   place-items: center;
@@ -105,7 +113,7 @@
   background: lime;
   color: black;
   text-decoration: none; /*To remove the underline*/
-  padding: 10px 30px;
+  padding: 10px 10px;
   margin: 20px 0;
   border: 0;
   border-radius: 10px;
@@ -125,7 +133,12 @@
   border-radius: 10px;
   border: none;
   outline: none;
-  border: 1px groove goldenrod;
+  margin: .5rem;
+  transition: all .5s ease-out;
+  /* border: 1px groove goldenrod; */
+}
+.input50 > input:hover {
+  box-shadow: 0 0 100px 10000px rgba(0,0,0,0.65);
 }
 
 /* Responsive section */

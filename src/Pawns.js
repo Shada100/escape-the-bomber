@@ -1,19 +1,23 @@
 import React from "react";
 import "./Board.css";
-function Pawns({ pawns }) {
+import { useState } from "react";
+function Pawns({ openTextBox }) {
+  const pawn = {
+    id: 1,
+    image: { url: "./PlayersPng/react-pawn.png" },
+    use: true,
+  };
+
   return (
     <div>
-      {pawns.map((pawn) => {
-        return <Pawn key={pawn.id} {...pawn} />;
-      })}
-    </div>
-  );
-}
-
-function Pawn({ id, image, use }) {
-  return (
-    <div key={id}>
-      <img src={image.url}  alt="Pawn" className="picz"/>
+      <div key={pawn.id}>
+        <img
+          src={pawn.image.url}
+          alt="Pawn"
+          className="picz"
+          onClick={openTextBox}
+        />
+      </div>
     </div>
   );
 }

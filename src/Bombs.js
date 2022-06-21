@@ -1,21 +1,19 @@
 import React from "react";
 import "./Board.css";
-function Bombs({ bombs }) {
+function Bombs({ openTextBox }) {
+  const bomb = { id: 1, image: { url: "./PlayersPng/Bomb3.png" }, use: true };
   return (
-    <>
-      {bombs.map((bomb) => {
-        return <Bomb key={bomb.id} {...bomb} />;
-      })}
-    </>
-  );
-}
-
-function Bomb({ id, image, use }) {
-  console.log(image.url);
-  return (
-    <div key={id}>
-      <img src={image.url} alt="bomb" className="picz"/>
+    <div>
+      <div key={bomb.id}>
+        <img
+          src={bomb.image.url}
+          alt="bomb"
+          className="picz"
+          onClick={openTextBox}
+        />
+      </div>
     </div>
   );
 }
+
 export default Bombs;
