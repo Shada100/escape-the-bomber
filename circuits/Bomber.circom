@@ -35,8 +35,6 @@ template Ensureboardlimitandifbombed() {
     signal input bombY;
    
 
-    signal output solHashOut;
-
 
     var Ecoordinate[2] = [escapersGuessX, escapersGuessY];
     var Bcoordinate[2] = [bombX, bombY];
@@ -61,13 +59,13 @@ template Ensureboardlimitandifbombed() {
     Rang[0].in <==  Ecoordinate[0];
     Rang[0].range[0] <== bombX-1;
     Rang[0].range[1] <== bombX+1;
-    Rang[0].out === 1
+    Rang[0].out === 1;
     //checking the attackers y coordinate with the bombers y range
     Rang[1] = RangeProof(5);
     Rang[1].in <==  Ecoordinate[1];
     Rang[1].range[0] <== bombY-1;
     Rang[1].range[1] <== bombY+1;
-    Rang[1].out === 1
+    Rang[1].out === 1;
    // if both gives an output of 1 the bomber wins cause the escaper is within his range 
 
 }

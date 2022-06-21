@@ -59,13 +59,13 @@ template Ensureboardlimitandifbombed() {
     Rang[0].in <==  Ecoordinate[0];
     Rang[0].range[0] <== bombX-1;
     Rang[0].range[1] <== bombX+1;
-    Rang[0].out === 0
+    Rang[0].out === 0;
     //checking the attackers y coordinate with the bombers y range
     Rang[1] = RangeProof(5);
     Rang[1].in <==  Ecoordinate[1];
     Rang[1].range[0] <== bombY-1;
     Rang[1].range[1] <== bombY+1;
-    Rang[1].out === 0
+    Rang[1].out === 0;
    // if both gives an output of 0 the escaper wins cause the escaper is not within the bombers range 
 }
 component main{public[escapersGuessX, escapersGuessY]} =  Ensureboardlimitandifbombed();
