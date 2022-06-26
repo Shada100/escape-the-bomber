@@ -13,13 +13,11 @@ template RangeProof(n) {
     // Checking if it is less than the upper bound
     low.in[0] <== in;
     low.in[1] <== range[1];
-    1 === low.out;
     //checking if it is higher than the upperbound
     high.in[0] <== in;
     high.in[1] <== range[0];
-    1 === high.out;
-    //this is like an And truth table will give an output of one 
-    //only if both are with(within range)
+    //this is like an And truth table will give an output of zero 
+    //only if it is out of range and the other is true
     out <== (low.out) * (high.out);
 }
 template Ensureboardlimitandifbombed() {
@@ -59,13 +57,13 @@ template Ensureboardlimitandifbombed() {
     Rang[0].in <==  Ecoordinate[0];
     Rang[0].range[0] <== bombX-1;
     Rang[0].range[1] <== bombX+1;
-    Rang[0].out === 0;
     //checking the attackers y coordinate with the bombers y range
     Rang[1] = RangeProof(5);
     Rang[1].in <==  Ecoordinate[1];
     Rang[1].range[0] <== bombY-1;
     Rang[1].range[1] <== bombY+1;
-    Rang[1].out === 0;
-   // if both gives an output of 0 the escaper wins cause the escaper is not within the bombers range 
+
+   Rang[0].out * Rang[1].out === 0;
+   // if any gives an output of 0 the escaper wins cause the escaper is not within the bombers range of attack
 }
 component main{public[escapersGuessX, escapersGuessY]} =  Ensureboardlimitandifbombed();
