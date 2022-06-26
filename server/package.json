@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shada100/escape-the-bomber.git"
+  },
+  "author": "Shada-Funmi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shada100/escape-the-bomber/issues"
+  },
+  "homepage": "https://github.com/Shada100/escape-the-bomber#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18",
+    "socket.io": "^4.5.1"
+  }
+}
