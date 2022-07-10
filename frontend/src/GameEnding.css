@@ -1,0 +1,116 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background-color: palevioletred; */
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15em;
+  margin: 0;
+}
+
+p {
+  /* opacity: .6; */
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.Container {
+  /* background-color: paleturquoise; */
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100vw;
+}
+.GameEndWrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* display: none; */
+  z-index: 20;
+  transition: all 0.5s ease-in;
+}
+.View {
+  display: block;
+}
+.Box {
+  color: lime;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Box > div {
+  font-size: 3rem;
+  width: 50vw;
+  height: 25vh;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px lime groove;
+  background-color: black;
+  position: relative;
+  transition: all 0.2s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Box > div:hover {
+  box-shadow: 0 0 15px 3px lime;
+}
+
+.Btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.05rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: lime;
+  transition: all 0.2s ease-in;
+  position: absolute;
+}
+
+.Btn:hover {
+  background-color: black;
+  color: lime;
+  cursor: pointer;
+}
+
+.PlayBtn {
+  width: 5rem;
+  height: 2.5rem;
+  padding: 0.05rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: lime;
+  margin-top: 1rem;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+}
+
+.PlayBtn:hover {
+  background-color: black;
+  color: lime;
+  cursor: pointer;
+}
+
+.OpenBtn {
+  left: 2px;
+  top: 2px;
+}
+.CloseBtn {
+  right: 2px;
+  top: 2px;
+}

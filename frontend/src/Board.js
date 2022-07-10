@@ -1,7 +1,7 @@
 import "./Board.css";
 import Box from "./Box";
 
-const Board = ({ escapePawn, bomberBomb }) => {
+const Board = ({ escapePawn, bomberBomb, bombSet }) => {
   const xComponent = ["0", "1", "2", "3", "4", "5"];
   const yComponent = ["0", "1", "2", "3", "4", "5"];
   return (
@@ -12,6 +12,7 @@ const Board = ({ escapePawn, bomberBomb }) => {
             <Box
               escapePawn={escapePawn}
               bomberBomb={bomberBomb}
+              bombSet={bombSet}
               coordinate={[x, y]}
             />
           </div>

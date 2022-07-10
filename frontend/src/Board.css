@@ -22,7 +22,7 @@
   width: 15%;
   height: 15%;
   background-color: transparent;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   /* border: 0.1px solid lime; */
 }
 .picz:hover {
@@ -53,8 +53,8 @@
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid blue;
-  border-left: 2px solid   blue;
-  border-right: 2px solid  blue;
+  border-left: 2px solid blue;
+  border-right: 2px solid blue;
   height: 50%;
   width: 25vw;
 }
@@ -82,7 +82,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 50%;
+  width: 100%;
 }
 .p2 {
   display: flex;
@@ -133,12 +133,12 @@
   border-radius: 10px;
   border: none;
   outline: none;
-  margin: .5rem;
-  transition: all .5s ease-out;
+  margin: 0.5rem;
+  transition: all 0.5s ease-out;
   /* border: 1px groove goldenrod; */
 }
 .input50 > input:hover {
-  box-shadow: 0 0 100px 10000px rgba(0,0,0,0.65);
+  box-shadow: 0 0 100px 10000px rgba(0, 0, 0, 0.65);
 }
 
 /* Responsive section */

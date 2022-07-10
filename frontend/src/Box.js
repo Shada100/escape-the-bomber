@@ -1,7 +1,7 @@
 import React from "react";
 import "./Board.css";
 
-function Box({ escapePawn, bomberBomb, coordinate }) {
+function Box({ escapePawn, bomberBomb, coordinate, bombSet }) {
   let pawnImage = "./PlayersPng/react-pawn.png";
   let bombImage = "./PlayersPng/Bomb3.png";
   //  if (escapePawn) {
@@ -22,12 +22,16 @@ function Box({ escapePawn, bomberBomb, coordinate }) {
           style={{ width: "50px", height: "50px" }}
         />
       )}
-      {bomberBomb.x === coordinate[0] && bomberBomb.y === coordinate[1] && (
-        <img
-          src={bombImage}
-          alt="bomb"
-          style={{ width: "50px", height: "50px" }}
-        />
+      {bombSet.map(
+        (bomb) =>
+          bomb.x === coordinate[0] &&
+          bomb.y === coordinate[1] && (
+            <img
+              src={bombImage}
+              alt="bomb"
+              style={{ width: "50px", height: "50px" }}
+            />
+          )
       )}
     </div>
   );
